@@ -41,4 +41,12 @@
 
 <?php $this->load->view('shared/navbar'); ?>
 
+<script type="text/javascript">
+
+jQuery(function() {
+
+});
+
+</script>
+
 <?php $this->load->view('shared/footer'); ?>

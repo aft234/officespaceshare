@@ -7,7 +7,7 @@
     <h2 id="available-spaces">Available Spaces</h2>
 
     <div class="row" id="spaces">
-        <div class="span10 offset1 available-space featured">
+        <div class="span10 offset1 available-space featured" data-id="">
             <p class="listing-title">2 desks at 44 Wall St 13th Floor</p>
             <p class="listing-description">We are a group of 3, 2 software developers and 1 stock broker looking to move into a bigger corner office on the 13th floor. We need to fill 2 desks.</p>
             <?php
@@ -27,6 +27,11 @@
             <p class="desks-available"><em>Desks Available:</em> 2</p>
             <p class="desk-price"><em>Price per Desk:</em> $315</p>
             <p class="lease-duration"><em>Lease Duration:</em> 6 months</p>
+
+            <span style="display:none" class="contact-lister" data-id="">
+                <center><a href="<?php echo site_url('smartass/spaces'); ?>" class="" ><button class="contact-button" style="margin-top: -200px">Contact</button></a></center>
+            </span>
+
         </div>
         <div class="span10 offset1 available-space">
             <p class="listing-title">2 desks at 44 Wall St 13th Floor</p>
@@ -58,6 +63,16 @@ jQuery(function() {
         'autoDimensions': false,
         'height': 403,
         'width' : 500
+    });
+
+    var contactButton = $('.contact-lister');
+    var availableSpace = $('.available-space');
+    $(availableSpace).live('mouseenter', function() {
+        contactButton.fadeIn('slow');
+    });
+
+    $(availableSpace).live('mouseleave', function() {
+        contactButton.hide();
     });
 })
 

@@ -28,12 +28,14 @@ a {
     text-align: center;
 }
 
-a button.homepage-buttons {
+a button.homepage-buttons,
+a button.contact-button {
     color: #222222;
     font: 18px "Futura", "Tahoma", "Helvetica", "Arial", "sans-serif";
 }
 
 button.homepage-buttons,
+button.contact-button,
 input[type='submit'] {
     background: #3DC989;
     border: none;
@@ -41,6 +43,7 @@ input[type='submit'] {
 }
 
 button.homepage-buttons:hover,
+button.contact-button:hover,
 input[type='submit']:hover {
     background: #F44A61;
 }
@@ -77,6 +80,7 @@ input[type='submit']:hover {
     }
 
 button.homepage-buttons,
+button.contact-button,
 .featured-listing,
 input[type='submit'],
 .available-space {
