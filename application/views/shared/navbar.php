@@ -18,7 +18,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="">Logout</a></li>
                         <li><a href="">My Listings</a></li>
-                        <li><a href="">List a Space</a></li>
+                        <li><a href="<?php echo site_url('smartass/list_space'); ?>">List a Space</a></li>
                         <li><a href="<?php echo site_url('smartass/spaces'); ?>">Available Spaces</a></li>
                     </ul>
                 </li>

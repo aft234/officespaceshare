@@ -14,9 +14,9 @@
 
     <div class="row">
         <div class="span3">&nbsp;</div>
-        <a class=""><button class="homepage-buttons span3" style="margin-left:0">I need desks</button></a>
+        <a href="<?php echo site_url('smartass/spaces'); ?>" class=""><button class="homepage-buttons span3" style="margin-left:0">I need desks</button></a>
         <div class="span1">&nbsp;</div>
-        <a class=""><button class="homepage-buttons span3" style="margin-left:0">
+        <a href="<?php echo site_url('smartass/list_space'); ?>" class=""><button class="homepage-buttons span3" style="margin-left:0">
             <span >I have desks</span>
         </button></a>
     </div>
