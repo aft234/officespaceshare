@@ -16,6 +16,10 @@ html, body {
     margin-top: 10px;
 }
 
+a {
+    color: #222222;
+}
+
 /* Homepage */
 
 #value-prop {
@@ -138,6 +142,17 @@ input[type='submit'],
     .available-space .desk-price {
     }
     .available-space .lease-duration {
+    }
+
+.featured {
+    padding: 20px;
+    background: #f0f0f0;
+    border: 1px dashed #F42945;
+    cursor: pointer;
+    line-height: 1.5em;
+}
+    .featured:hover {
+        background: #F42945;
     }
 
 h2#available-spaces {

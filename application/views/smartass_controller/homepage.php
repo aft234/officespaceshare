@@ -27,12 +27,14 @@
 
     <div class="row" id="featured-container">
         <div class="span4">&nbsp;</div>
-        <div class="span4">
-            <div class="featured-listing">
-                <p class="listing-title">2 desks at 44 Wall St 13th Floor</p>
-                <p class="listing-description">We are a group of 3, 2 software developers and 1 stock broker looking to move into a bigger corner office on the 13th floor. We need to fill 2 desks.</p>
+        <a href="<?php echo site_url('smartass/spaces'); ?>">
+            <div class="span4">
+                <div class="featured-listing">
+                    <p class="listing-title">2 desks at 44 Wall St 13th Floor</p>
+                    <p class="listing-description">We are a group of 3, 2 software developers and 1 stock broker looking to move into a bigger corner office on the 13th floor. We need to fill 2 desks.</p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 
 </div>

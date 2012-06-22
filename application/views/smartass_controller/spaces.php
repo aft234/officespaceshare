@@ -7,7 +7,7 @@
     <h2 id="available-spaces">Available Spaces</h2>
 
     <div class="row" id="spaces">
-        <div class="span10 offset1 available-space">
+        <div class="span10 offset1 available-space featured">
             <p class="listing-title">2 desks at 44 Wall St 13th Floor</p>
             <p class="listing-description">We are a group of 3, 2 software developers and 1 stock broker looking to move into a bigger corner office on the 13th floor. We need to fill 2 desks.</p>
             <?php
