@@ -9,16 +9,17 @@
             <form class="well form-horizontal" id="list-space">
                 <h2>Login</h2>
                 <fieldset>
+
                     <div class="control-group">
-                        <label class="control-label" for="input01">Email</label>
+                        <label class="control-label" for="email">Email</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge" id="input01">
+                            <input type="text" class="input-xlarge" id="email" name="email" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="input01">Password</label>
+                        <label class="control-label" for="password">Password</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge" id="input01">
+                            <input type="password" class="input-xlarge" id="password" name="password" />
                         </div>
                     </div>
 

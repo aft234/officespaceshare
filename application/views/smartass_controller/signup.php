@@ -6,19 +6,23 @@
 
     <div class="row">
         <div class="offset3 span6">
-            <form class="well form-horizontal" id="list-space">
+            <form class="well form-horizontal" id="list-space" action="<?php echo site_url('smartass/signup'); ?>" method="post">
                 <h2>Signup</h2>
+
+                <?php echo validation_errors('<div class="alert alert-error">', '</div>'); ?>
+
                 <fieldset>
+
                     <div class="control-group">
-                        <label class="control-label" for="input01">Email</label>
+                        <label class="control-label" for="email">Email</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge" id="input01">
+                            <input type="text" class="input-xlarge" id="email" name="email" value="<?php echo set_value('email'); ?>" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="input01">Password</label>
+                        <label class="control-label" for="password">Password</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge" id="input01">
+                            <input type="text" class="input-xlarge" id="password" name="password" />
                         </div>
                     </div>
 
