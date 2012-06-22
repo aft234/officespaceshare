@@ -15,7 +15,22 @@ class User_model extends CI_Model {
         );
 
         $insert = $this->db->insert('users', $new_user_insert_data);
+
         return $insert;
+    }
+
+    function login ($email, $password)
+    {
+        $query = $this->db->get_where('users', array('email' => $email, 'password'=>$password));
+
+        if( $query->num_rows() == 1 )
+        {
+            return $row = $query->row();
+        }
+        else
+        {
+            return false;
+        }
     }
 
 }

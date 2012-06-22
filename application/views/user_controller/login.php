@@ -6,14 +6,17 @@
 
     <div class="row">
         <div class="offset3 span6">
-            <form class="well form-horizontal" id="list-space">
+            <form class="well form-horizontal" id="list-space" action="<?php echo site_url('user/login'); ?>" method="post">
                 <h2>Login</h2>
+
+                <?php echo validation_errors('<div class="alert alert-error">', '</div>'); ?>
+
                 <fieldset>
 
                     <div class="control-group">
                         <label class="control-label" for="email">Email</label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge" id="email" name="email" />
+                            <input type="text" class="input-xlarge" id="email" name="email" value="<?php echo set_value('email'); ?>" />
                         </div>
                     </div>
                     <div class="control-group">

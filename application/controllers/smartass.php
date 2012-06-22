@@ -53,14 +53,32 @@ class Smartass extends MY_Controller {
                 $user = new User_model();
                 if ( $user->create($email, $password) )
                 {
-                    // $user->login();
-                    echo $email;
-                    echo $password;
-                    return;
+                    if ( $res = $user->login($email, $password) )
+                    {
+                        $data = array(
+                            'id' =>  $res->id,
+                            'email' =>  $res->email
+                        );
+
+                        $this->session->set_userdata($data);
+                        error_log('Successful Login');
+                        return;
+                    }
+                    else
+                    {
+                        $this->data['title'] = 'Office Share NYC | Login';
+                        $this->load->view('user_controller/login', $this->data);
+                    }
+                }
+                else
+                {
+                    $this->data['title'] = 'Office Share NYC | Signup';
+                    $this->load->view('smartass_controller/signup', $this->data);
                 }
             }
 
         }
+
         $this->data['title'] = 'Office Share NYC | Signup';
         $this->load->view('smartass_controller/signup', $this->data);
     }
