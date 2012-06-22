@@ -1,9 +1,5 @@
 <?php
-$logged_in = false;
-if ( $this->session->userdata('email') )
-{
-    $logged_in = true;
-}
+( $this->session->userdata('email') ) ? $logged_in = true : $logged_in = false;
 ?>
 
 <!-- Navbar -->
@@ -11,12 +7,6 @@ if ( $this->session->userdata('email') )
     <div class="navbar-inner">
         <div class="container">
             <ul class="pull-right nav">
-                <!-- <li>
-                    <a href="">Available Spaces</a>
-                </li>
-                <li>
-                    <a href="">List a Space</a>
-                </li> -->
                 <li class="divider-vertical"></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -40,8 +30,8 @@ if ( $this->session->userdata('email') )
                             <?php
                         }
                         ?>
-                        <li><a href="<?php echo site_url('smartass/list_space'); ?>">List a Space</a></li>
-                        <li><a href="<?php echo site_url('smartass/spaces'); ?>">Available Spaces</a></li>
+                        <li><a href="<?php echo site_url('listings/create'); ?>">List a Space</a></li>
+                        <li><a href="<?php echo site_url('listings/show'); ?>">Available Spaces</a></li>
                     </ul>
                 </li>
             </ul>

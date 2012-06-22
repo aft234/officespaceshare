@@ -15,18 +15,6 @@ class Smartass extends MY_Controller {
         $this->load->view('smartass_controller/homepage', $this->data);
     }
 
-    public function list_space ()
-    {
-        $this->data['title'] = 'Office Share NYC | List Space';
-        $this->load->view('smartass_controller/list_space', $this->data);
-    }
-
-    public function spaces ()
-    {
-        $this->data['title'] = 'Office Share NYC | Find a Space';
-        $this->load->view('smartass_controller/spaces', $this->data);
-    }
-
     public function signup ()
     {
         $email = '';

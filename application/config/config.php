@@ -358,5 +358,11 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+
+
+$config['space_information'] = array('address', 'zipcode', 'desks_available', 'desk_price', 'lease_duration', 'details');
+
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

@@ -42,7 +42,7 @@ class User extends MY_Controller {
 
                     $this->session->set_userdata($data);
                     error_log('Successful Login');
-                    return;
+                    redirect('/smartass/homepage');
                 }
                 else
                 {
