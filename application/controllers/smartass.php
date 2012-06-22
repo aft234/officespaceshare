@@ -27,6 +27,12 @@ class Smartass extends MY_Controller {
         $this->load->view('smartass_controller/spaces', $this->data);
     }
 
+    public function signup ()
+    {
+        $this->data['title'] = 'Office Share NYC | Signup';
+        $this->load->view('smartass_controller/signup', $this->data);
+    }
+
 }
 
 /* End of file home.php */
