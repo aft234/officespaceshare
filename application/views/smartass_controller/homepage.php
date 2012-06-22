@@ -23,7 +23,7 @@
 
     <div class="clear"></div>
 
-    <h2 id="featured-title">Featured</h2>
+    <h2 id="featured-title">Featured Listing</h2>
 
     <div class="row" id="featured-container">
         <div class="span4">&nbsp;</div>
