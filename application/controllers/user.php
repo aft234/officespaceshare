@@ -57,6 +57,12 @@ class User extends MY_Controller {
         $this->load->view('user_controller/login', $this->data);
     }
 
+    function logout ()
+    {
+        $this->session->sess_destroy();
+        redirect('/smartass/homepage');
+    }
+
 
     // Validation
     function invalid_combo($email, $password)
