@@ -7,16 +7,16 @@
     <div class="row">
         <div class="offset2 span8">
             <div class="well" id="value-prop">
-                In NYC it can be difficult to either <strong>find a small number of desks</strong> or to <strong>find people to take a desk or two</strong> in an office. We want to make it easy.
+                In NYC it can be difficult to either <strong>find a small number of desks</strong> or to <strong>find people to fill a desk or two</strong> in an office. We want to make it easy.
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="span3">&nbsp;</div>
-        <a href="<?php echo site_url('smartass/spaces'); ?>" class=""><button class="homepage-buttons span3" style="margin-left:0">I need desks</button></a>
+        <a href="<?php echo site_url('listings/show'); ?>" class=""><button class="homepage-buttons span3" style="margin-left:0">I need desks</button></a>
         <div class="span1">&nbsp;</div>
-        <a href="<?php echo site_url('smartass/list_space'); ?>" class=""><button class="homepage-buttons span3" style="margin-left:0">
+        <a href="<?php echo site_url('listings/create'); ?>" class=""><button class="homepage-buttons span3" style="margin-left:0">
             <span >I have desks</span>
         </button></a>
     </div>

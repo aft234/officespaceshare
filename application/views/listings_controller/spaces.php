@@ -29,7 +29,7 @@
             <p class="lease-duration"><em>Lease Duration:</em> 6 months</p>
 
             <span style="display:none" class="contact-lister" data-id="">
-                <center><a href="<?php echo site_url('smartass/spaces'); ?>" class="" ><button class="contact-button" style="margin-top: -200px">Contact</button></a></center>
+                <center><a href="<?php echo site_url('listings/message'); ?>" class="" ><button class="contact-button" style="margin-top: -200px">Contact</button></a></center>
             </span>
 
         </div>

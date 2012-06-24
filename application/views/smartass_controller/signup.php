@@ -17,6 +17,7 @@
                         <label class="control-label" for="email">Email</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" id="email" name="email" value="<?php echo set_value('email'); ?>" />
+                            <!-- <p class="help-block"></p> -->
                         </div>
                     </div>
                     <div class="control-group">

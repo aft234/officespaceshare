@@ -55,7 +55,41 @@ class Listings extends MY_Controller {
     public function show ()
     {
         $this->data['title'] = 'Office Share NYC | Find a Space';
-        $this->load->view('listings_controller/list', $this->data);
+        $this->load->view('listings_controller/spaces', $this->data);
+    }
+
+    public function message ()
+    {
+        $from_email = '';
+        $subject = '';
+        $message = '';
+
+        $from_email = $this->input->post('from_email');
+        $subject = "OfficeShareNYC - I'm interested in your space!'";
+        $message = $this->input->post('message');
+
+        if ( $from_email || $subject || $message )
+        {
+            // Validation
+            $this->form_validation->set_rules('from_email', 'From', 'trim|required|valid_email');
+
+            if ( $this->form_validation->run() == FALSE )
+            {
+                $this->data['title'] = 'Office Share NYC | Message';
+                $this->load->view('listings_controller/message', $this->data);
+                return;
+            }
+            else
+            {
+                // Send message
+                echo 'Yes';
+                return;
+            }
+
+        }
+
+        $this->data['title'] = 'Office Share NYC | Message';
+        $this->load->view('listings_controller/message', $this->data);
     }
 
 }
