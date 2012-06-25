@@ -43,7 +43,20 @@ class Listings extends MY_Controller {
             else
             {
                 // Save in db
-                return;
+                $listing = new Listings_model();
+                if ( $res = $listing->create($address, $zipcode, $desks_available, $desk_price, $lease_duration, $details) )
+                {
+                    // Sucess Page
+                    $this->data['title'] = 'Office Share NYC | Listing Created';
+                    $this->load->view('listings_controller/success', $this->data);
+                    return;
+                }
+                else
+                {
+                    $this->data['title'] = 'Office Share NYC | Signup';
+                    $this->load->view('listings_controller/list_space', $this->data);
+                    return;
+                }
             }
 
         }
@@ -82,7 +95,8 @@ class Listings extends MY_Controller {
             else
             {
                 // Send message
-                echo 'Yes';
+                echo $from_email;
+                echo $subject;
                 return;
             }
 

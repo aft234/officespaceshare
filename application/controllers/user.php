@@ -48,6 +48,7 @@ class User extends MY_Controller {
                 {
                     $this->data['title'] = 'Office Share NYC | Login';
                     $this->load->view('user_controller/login', $this->data);
+                    return;
                 }
             }
 

@@ -27,7 +27,7 @@
 
     <div class="row" id="featured-container">
         <div class="span4">&nbsp;</div>
-        <a href="<?php echo site_url('smartass/spaces'); ?>">
+        <a href="<?php echo site_url('listings/show'); ?>">
             <div class="span4">
                 <div class="featured-listing">
                     <p class="listing-title">2 desks at 44 Wall St 13th Floor</p>

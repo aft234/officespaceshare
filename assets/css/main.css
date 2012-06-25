@@ -163,3 +163,17 @@ h2#available-spaces {
     margin-bottom: 20px;
     text-align: center;
 }
+
+
+
+/* Listings */
+
+#listing-success p {
+    font: 16px/1.5em "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-align: center;
+}
+    #listing-success a {
+        color: #3DC989;
+    }
+    #listing-success a:hover {
+        color: #FCA24C;

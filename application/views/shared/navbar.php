@@ -10,7 +10,7 @@
                 <li class="divider-vertical"></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <?php echo ( $logged_in ) ? $this->session->userdata('email') : 'NAV'; ?>
+                        <?php echo ( $logged_in ) ? $this->session->userdata('email') : 'MENU'; ?>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">

@@ -8,7 +8,7 @@ class MY_Controller extends CI_Controller {
     {
         parent::__construct();
         // $this->load->library(array());
-        $this->load->model(array('user_model'));
+        $this->load->model(array('user_model', 'listings_model'));
     }
 
 }
