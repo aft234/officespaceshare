@@ -1,3 +1,5 @@
+-- Added email to listings so when static when have email of user
+
 -- phpMyAdmin SQL Dump
 -- version 3.3.9.2
 -- http://www.phpmyadmin.net
@@ -29,6 +31,7 @@ DROP TABLE IF EXISTS `listings`;
 CREATE TABLE `listings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `zipcode` int(11) DEFAULT NULL,
   `desks_available` int(11) DEFAULT NULL,

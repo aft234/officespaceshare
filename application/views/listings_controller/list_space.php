@@ -13,6 +13,13 @@
 
                 <fieldset>
                     <div class="control-group">
+                        <label class="control-label" for="email">Email</label>
+                        <div class="controls">
+                            <input type="text" class="input-xlarge" id="email" name="email" value="<?php echo set_value('email'); ?>" />
+                            <p class="help-block">We will not spam you. Promise :)</p>
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label" for="address">Address</label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" id="address" name="address" value="<?php echo set_value('address'); ?>">

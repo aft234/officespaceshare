@@ -3,9 +3,9 @@
     clear: both;
 }
 
-.alert {
+.alert, .help-block {
     font: 14px "Helvetica Neue", "Helvetica", "Arial", "sans-serif";;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 #header {

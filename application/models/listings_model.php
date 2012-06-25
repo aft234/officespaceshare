@@ -7,9 +7,10 @@ class Listings_model extends CI_Model {
         parent::__construct();
     }
 
-    function create ( $address, $zipcode, $desks_available, $desk_price, $lease_duration, $details )
+    function create ( $email, $address, $zipcode, $desks_available, $desk_price, $lease_duration, $details )
     {
         $new_user_insert_data = array(
+            'email'             =>      $email,
             'address'           =>      $address,
             'zipcode'           =>      $zipcode,
             'desks_available'   =>      $desks_available,

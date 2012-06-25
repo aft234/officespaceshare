@@ -11,6 +11,7 @@ class Listings extends MY_Controller {
 
     public function create ()
     {
+        $email = '';
         $address = '';
         $zipcode = '';
         $desks_available = '';
@@ -18,6 +19,7 @@ class Listings extends MY_Controller {
         $lease_duration = '';
         $details = '';
 
+        $email = $this->input->post('email');
         $address = $this->input->post('address');
         $zip_code = $this->input->post('zip_code');
         $desks_available = $this->input->post('desks_available');
@@ -25,9 +27,10 @@ class Listings extends MY_Controller {
         $lease_duration = $this->input->post('lease_duration');
         $details = $this->input->post('details');
 
-        if ( $address || $zipcode || $desks_available || $desk_price || $lease_duration || $details )
+        if ($this->input->server('REQUEST_METHOD') == 'POST')
         {
             // Validation
+            $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
             $this->form_validation->set_rules('address', 'Address', 'required');
             $this->form_validation->set_rules('zip_code', 'Zip Code', 'trim|required|min_length[5]|max_length[5]|integer');
             $this->form_validation->set_rules('desks_available', 'Desks Available', 'trim|required|integer');
@@ -44,8 +47,12 @@ class Listings extends MY_Controller {
             {
                 // Save in db
                 $listing = new Listings_model();
-                if ( $res = $listing->create($address, $zipcode, $desks_available, $desk_price, $lease_duration, $details) )
+                if ( $res = $listing->create($email, $address, $zipcode, $desks_available, $desk_price, $lease_duration, $details) )
                 {
+                    // Email Anthony and Josh
+                    $email = new Email_model();
+                    $email->send($email, 'anthony.tumbiolo@gmail.com', 'josh.kehn@gmail.com', 'New Listing Inquiry', 'New Listing Cheahhhh');
+
                     // Sucess Page
                     $this->data['title'] = 'Office Share NYC | Listing Created';
                     $this->load->view('listings_controller/success', $this->data);
@@ -95,8 +102,12 @@ class Listings extends MY_Controller {
             else
             {
                 // Send message
-                echo $from_email;
-                echo $subject;
+                $email = new Email_model();
+                $email->send($from_email, 'anthony.tumbiolo@gmail.com', 'josh.kehn@gmail.com', $subject, $message);
+
+                // Sucess Page
+                $this->data['title'] = 'Office Share NYC | Listing Created';
+                $this->load->view('listings_controller/email_inquiry_success', $this->data);
                 return;
             }
 

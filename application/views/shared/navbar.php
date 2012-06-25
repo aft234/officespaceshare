@@ -25,8 +25,8 @@
                         else
                         {
                             ?>
-                            <li><a href="<?php echo site_url('smartass/signup'); ?>">Signup</a></li>
-                            <li><a href="<?php echo site_url('user/login'); ?>">Login</a></li>
+                            <!-- <li><a href="<?php echo site_url('smartass/signup'); ?>">Signup</a></li>
+                            <li><a href="<?php echo site_url('user/login'); ?>">Login</a></li> -->
                             <?php
                         }
                         ?>
