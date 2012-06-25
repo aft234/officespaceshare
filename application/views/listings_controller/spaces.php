@@ -31,10 +31,14 @@
             <span style="display:none" class="contact-lister" data-id="">
                 <center><a href="<?php echo site_url('listings/message'); ?>" class="" ><button class="contact-button" style="margin-top: -200px">Contact</button></a></center>
             </span>
-
         </div>
 
     </div>
+
+    <div class="span4">&nbsp;</div>
+    <a href="<?php echo site_url('listings/create'); ?>" class=""><button class="homepage-buttons span4" style="margin-left:0">
+        <span >Create a Listing</span>
+    </button></a>
 
 </div>
 
